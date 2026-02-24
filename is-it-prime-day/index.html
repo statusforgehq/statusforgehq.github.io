@@ -5,16 +5,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Is It Prime Day?</title>
 <meta name="description" content="Instantly check if today is Prime Day.">
-<link rel="stylesheet" href="style.css">
+<style>
+* {margin:0;padding:0;box-sizing:border-box;}
+body {height:100vh;display:flex;justify-content:center;align-items:center;font-family:-apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#111;text-align:center;}
+.container {max-width:600px;}
+h1 {font-size:2rem;margin-bottom:2rem;letter-spacing:1px;}
+#answer {font-size:5rem;font-weight:700;}
+.yes {color:#16a34a;}
+.no {color:#dc2626;}
+.subtext {margin-top:1.5rem;font-size:1rem;opacity:0.6;}
+</style>
 </head>
 <body>
 
 <div class="container">
   <h1>Is It Prime Day?</h1>
-  <div id="answer">Checking...</div>
+  <div id="answer"></div>
   <div class="subtext" id="date"></div>
 </div>
 
-<script src="script.js"></script>
+<script>
+const answer = document.getElementById("answer");
+const dateText = document.getElementById("date");
+
+const today = new Date();
+// Primer logike: Friday = YES
+const isPrimeDay = today.getDay() === 5;
+
+answer.textContent = isPrimeDay ? "YES" : "NO";
+answer.classList.add(isPrimeDay ? "yes" : "no");
+
+dateText.textContent = today.toDateString();
+</script>
+
 </body>
 </html>
