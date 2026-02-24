@@ -1,12 +1,45 @@
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 50px;
-  background-color: #ffffff; /* svetla pozadina */
-  color: #111111; /* tamni tekst */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#status {
-  margin-top: 20px;
-  font-size: 1.5rem;
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #111;
+  text-align: center;
+}
+
+.container {
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+#answer {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.yes {
+  color: #16a34a;
+}
+
+.no {
+  color: #dc2626;
+}
+
+.subtext {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  opacity: 0.6;
 }
